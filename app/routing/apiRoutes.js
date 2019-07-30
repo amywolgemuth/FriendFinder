@@ -1,6 +1,5 @@
 var friends = require("../data/friends.js");
 var express = require("express");
-var bodyParser = require("body-parser");
 var apirouter = express.Router();
 
 //json for current friends list
@@ -14,9 +13,6 @@ apirouter.post("/api/friends", function(req, res){
 	console.log("posting...");
 	var newFriend = req.body;
 	console.log(newFriend);
-	//console.log(newFriend['scores[]']); //don't know why scores show up as "scores[]"
-	//console.log(newFriend.scores); //returns scores as 'scores[]'
-	//console.log(parseFloat(JSON.parse(newFriend.scores[0])));//does not work - undefined
 
 	//this function coverts users's results into a simple array of numbers
 	var newScore = function(array){
@@ -35,7 +31,6 @@ apirouter.post("/api/friends", function(req, res){
 		return delta;
 	}
 	//this function below we find the index of minimum difference
-	//https://stackoverflow.com/questions/11301438/return-index-of-greatest-value-in-an-array
 	function indexOfMin(array) {
     	if (array.length === 0) {
         	return -1;
@@ -43,14 +38,12 @@ apirouter.post("/api/friends", function(req, res){
 
     	var min = array[0];
     	var minIndex = 0;
-
     	for (var i = 1; i < array.length; i++) {
         	if (array[i] < min) {
             	minIndex = i;
             	min = array[i];
         	}
     	}
-
     	return minIndex;
 	}
 
