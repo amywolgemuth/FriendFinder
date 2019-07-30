@@ -3,19 +3,18 @@ var friendsArr = [
 	  "name":"Jonathan",
 	  "photo":"",
 	  "scores[]":[
-	      5,
-	      1,
 	      4,
+	      2,
 	      4,
 	      5,
+	      4,
 	      1,
 	      2,
-	      5,
+	      3,
 	      4,
-	      1
+	      3
 	    ]
 	}
 ];
-
 
 module.exports = friendsArr;
