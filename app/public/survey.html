@@ -111,7 +111,7 @@
     
     <br>
     <br>
-    <h4><strong>Q8: I would love to travel to other countries and experience new places.</strong></h4>
+    <h4><strong>Q8: You would love to travel to other countries and experience new places.</strong></h4>
     <select class="chosen-select" id="q8" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
       <option disabled selected value> -- select an option -- </option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -135,7 +135,7 @@
     
     <br>
     <br>
-    <h4><strong>Q10: I feel comfortable at parties and meeting new people.</strong></h4>
+    <h4><strong>Q10: You feel comfortable at parties and meeting new people.</strong></h4>
     <select class="chosen-select" id="q10" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
       <option disabled selected value> -- select an option -- </option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -221,6 +221,12 @@
                 $("#results-modal").modal("toggle"); 
               }
             })
+          // $.post("/api/friends", newFriend, function(res){
+          //       console.log(res);
+          //       alert("Info added!");
+          //       $("#match-name").text(res.name);
+          //       $("#match-img").attr("src", res.photo);
+          //   })
           }
           else{
             alert("Form not correctly filled out!");
